@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 38: expected statement.
+    povname = renpy.input("Your name", length = 32)
+            ^
+
+Ren'Py Version: Ren'Py 8.1.2.23090503
+Sat Sep 23 19:58:08 2023
