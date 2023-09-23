@@ -1,9 +1,7 @@
 ﻿# Declare characters used by this game. The color argument colorizes the
 # name of the character.
-define Hiyajou = Character("Professor Hiyajou")
-image Professor Hiyajou = "Professor Hiyajou.png"
-image Professor Hiyajou confused = "Professor_Hiyajou_confused.png"
-image Professor Hiyajou nice = "Professor Hiyajou Nice.png"
+# define Hiyajou = Character("Professor Hiyajou")
+
 # The game starts here.
 
 # label start:
@@ -35,6 +33,12 @@ label start:
     Hiyajou "Wait what the fuc"
     show Professor Hiyajou nice
     Hiyajou "I didn't understand how to make combat system good i guess?"
+#   #Insert name here!
+    Hiyajou "So... What's your name?"
+    $ povname = renpy.input("What's your name?", length = 15)
+    MC "Uh... My name is [povname]"
+    Hiyajou "I see....[povname]. You ARE the choosen one!!!"
+    Hiyajou "Thank for testing i guess?"
     
 
     return
