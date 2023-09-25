@@ -1,5 +1,6 @@
 ##########################
 #ยังเขียนไม่เสร็จ อย่าเพิ่ง ctrl + / เดี๋ยวรันแล้ว error
+#ถ้าจะเขียน crop code และ ctrl + /
 ##########################
 
 #Set Battle
@@ -29,7 +30,8 @@
 ######################
 
 # ตำแหน่ง pythomon ของเรา
-label player_position:
+# label player_position:
+#     $ battle_pythomon = [p1, p2, p3]
 
 
 
