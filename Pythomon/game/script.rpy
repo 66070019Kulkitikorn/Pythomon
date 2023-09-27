@@ -33,9 +33,11 @@ label start:
     Hiyajou "Wait what the fuc"
     show Professor Hiyajou nice
     Hiyajou "I didn't understand how to make combat system good i guess?"
+
 #   #Insert name here!
     Hiyajou "So... What's your name?"
     $ povname = renpy.input("What's your name?", length = 15)
+
     MC "Uh... My name is [povname]"
     Hiyajou "I see....[povname]. You ARE the choosen one!!!"
     Hiyajou "Thank for testing i guess?"
