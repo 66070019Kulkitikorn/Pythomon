@@ -1,5 +1,5 @@
 #ค่อยกลับมาทำ
-init pyhton:
+init python:
     def opp_monsters_fixed():
         global monsters_total
         global battle_monsters
@@ -25,13 +25,13 @@ init pyhton:
 
 #ตำแหน่ง mon
 ###########################
-    def assign_pos():
-        monster_slot[0].sprite_pos =
-        monster_slot[1].sprite_pos =
-        monster_slot[2].sprite_pos =
-        monster_slot[0].dmg_pos =
-        monster_slot[1].dmg_pos =
-        monster_slot[2].dmg_pos =
+    # def assign_pos():
+    #     monster_slot[0].sprite_pos =
+    #     monster_slot[1].sprite_pos =
+    #     monster_slot[2].sprite_pos =
+    #     monster_slot[0].dmg_pos =
+    #     monster_slot[1].dmg_pos =
+    #     monster_slot[2].dmg_pos =
 
 
 #เปลี่ยนที่
