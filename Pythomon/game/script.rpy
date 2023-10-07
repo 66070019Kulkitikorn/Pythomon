@@ -41,6 +41,14 @@ label start:
     MC "Uh... My name is [povname]"
     Hiyajou "I see....[povname]. You ARE the choosen one!!!"
     Hiyajou "Thank for testing i guess?"
+    call load_setup
+    jump battle_loop
+
+label battle_loop:
+    call battle
+    $ restorehp()
+    $ restoremp()
+    jump battle_loop
     
 
     return

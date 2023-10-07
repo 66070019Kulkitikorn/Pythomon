@@ -1,6 +1,6 @@
 #ค่อยกลับมาทำ
 init python:
-    def opp_monsters_fixed():
+    def monstersFixed():
         global monsters_total
         global battle_monsters
         global m1

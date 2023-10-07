@@ -10,7 +10,6 @@ default _game_menu_screen = "preferences"
 
 label load_setup:
     call load_monsters
-    call load_items
     $ pythomon_list = [] #เริ่มมายังไม่มีซักตัว
     $ fixedset = "set 1"
     $ wild_monsters = [] #ยังไม่ใส่ศัตรู
