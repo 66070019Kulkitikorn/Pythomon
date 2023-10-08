@@ -25,13 +25,13 @@ init python:
 
 #ตำแหน่ง mon
 ###########################
-    # def assign_pos():
-    #     monster_slot[0].sprite_pos =
-    #     monster_slot[1].sprite_pos =
-    #     monster_slot[2].sprite_pos =
-    #     monster_slot[0].dmg_pos =
-    #     monster_slot[1].dmg_pos =
-    #     monster_slot[2].dmg_pos =
+    def asignPos():
+        monster_slot[0].sprite_pos = 0
+        monster_slot[1].sprite_pos = 256
+        monster_slot[2].sprite_pos = 512
+        monster_slot[0].dmg_pos = (576,320)
+        monster_slot[1].dmg_pos = (832,320)
+        monster_slot[2].dmg_pos = (1088,320)
 
 
 #เปลี่ยนที่

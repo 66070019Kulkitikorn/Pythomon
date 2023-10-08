@@ -94,18 +94,18 @@ init python:
         m_damage = currdmg*currdmg/(currdmg+p.dfn+p.bonus_dfn+turnbonus)
 
 
-    # def monsterImg(m):
-    #     if m.state == "attacking":
-    #         return im.MatrixColor
-    #     if m.state == "hit":
-    #         return 
-    #     if m.state == "heal": # green
-    #         return 
-    #     if m.state == "dying":
-    #         return 
-    #     if m.state == "other": # blue
-    #         return 
-    #     if m.state == "other2": # hue
-    #         return 
-    #     else:
-    #         return getImage(m)
+    def monsterImg(m):
+        if m.state == "attacking":
+            return im.MatrixColor(getImage(m), im.matrix.tint(1,.5,.5))
+        if m.state == "hit":
+            return im.MatrixColor(getImage(m), im.matrix.tint(1,.5,.5))
+        if m.state == "heal": # green
+            return im.MatrixColor(getImage(m), im.matrix.tint(.5,1,.5))
+        if m.state == "dying":
+            return im.MatrixColor(getImage(m), im.matrix.invert())
+        if m.state == "other": # blue
+            return im.MatrixColor(getImage(m), im.matrix.tint(.5,.5,1))
+        if m.state == "other2": # hue
+            return im.MatrixColor(getImage(m), im.matrix.hue(90))
+        else:
+            return getImage(m)
