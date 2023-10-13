@@ -1,32 +1,12 @@
-﻿# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-# define Hiyajou = Character("Professor Hiyajou")
-
-# The game starts here.
-
-# label start:
-
-#     # Show a background. This uses a placeholder by default, but you can
-#     # add a file (named either "bg room.png" or "bg room.jpg") to the
-#     # images directory to show it.
-
-#     scene bg room
-
-#     # This shows a character sprite. A placeholder is used, but you can
-#     # replace it by adding a file named "eileen happy.png" to the images
-#     # directory.
-
-#     show Professor Hiyajou
-
-#     # These display lines of dialogue.
-#     Hiyajou "You've created a new Ren'Py game."
-#     Hiyajou "Once you add a story, pictures, and music, you can release it to the world!"
-    
-#     # This ends the game.
-$ yourmonster = empty
-
+﻿
+# $ yourmonster = empty
+# define show_score = False
+# define show_mon = False
+# define mon_max_hp = 100
+# define mon_hpp = mon_max_hp
+# define your_max_hp = 100
+# define your_hp = your_max_hp
 label start:
-    $ ruri = Monster("Ruri", 100, "Crossslash", "Kamehameha", "FantasySeal", "Masterspark")
     scene bg room
     show Professor Hiyajou
     Hiyajou "Welcome LABMEM:011"
@@ -48,19 +28,27 @@ label start:
     menu select_mon:
         Hiyajou "Select one monster"
         "Mon1":
-            $ yourmonster = "Mon1"
-            $ skill1, skill2, skill3, skill4  = "Trasure Sign \"Ying-Yang Orb", "Divine Arts \"Wind God Kick", "Sign I \"lDream Orb String", "Divine Spirit \"Fantasy Seal"
-            $ skill1dmg, skill2dmg, skill3dmg, skill4dmg, = 10, 10, 20, 1000
+            $ yourmonster1 = "Mon1"
+            $ skill_position1 = ["Trasure Sign \"Ying-Yang Orb", "Divine Arts \"Wind God Kick", "Sign I \"lDream Orb String", "Divine Spirit \"Fantasy Seal"]
+            $ skill_dmg_position1 = [10, 10, 20, 1000]
         "Mon2":
-            $ yourmonster = "Mon2"
-            $ skill1, skill2, skill3, skill4  = "Star Sign \"Meteoric Shower", "Light Sign \"Luminous Strike", "Comet \"Blazing Star", "Love Sign \"MasterSpark"
-            $ skill1dmg, skill2dmg, skill3dmg, skill4dmg, = 10, 10, 20, 1000
+            $ yourmonster1 = "Mon2"
+            $ skill_position1 = ["Star Sign \"Meteoric Shower", "Light Sign \"Luminous Strike", "Comet \"Blazing Star", "Love Sign \"MasterSpark"]
+            $ skill_dmg_position1 = [10, 10, 20, 1000]
         "Mon3":
-            $ yourmonster = "Mon3"
-            $ skill1, skill2, skill3, skill4  = "Esoterica \"Gray Thaumaturgy", "Sea Opening \"Moses's Miracle", "Miracle \"God's Wind", "Snake Sign \"Orochi of Ancient Times"
-            $ skill1dmg, skill2dmg, skill3dmg, skill4dmg, = 10, 10, 20, 1000
+            $ yourmonster1 = "Mon3"
+            $ skill_position1 = ["Esoterica \"Gray Thaumaturgy", "Sea Opening \"Moses's Miracle", "Miracle \"God's Wind", "Snake Sign \"Orochi of Ancient Times"]
+            $ skill_dmg_position1 = [10, 10, 20, 1000]
+    $ mon1 = True
+    $ mon1_hp = 100
     Hiyajou "OK LEST TEST"
+    $ mon_max_hp = 100
+    $ mon_hp = mon_max_hp
+    $ oppmonster = "Dodo"
+    $ opp_skill_position1 = ["Tackle", "Pinch", "Hard tackle", "Dodo noise"]
+    $ opp_skill_dmg_position1 = [10, 15, 20, 0]
     call battle_loop
+    hide screen hp_bars_1v1
     Hiyajou "WOW that nice"
 
 # label battle_loop:
