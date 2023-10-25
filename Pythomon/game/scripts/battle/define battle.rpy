@@ -34,3 +34,9 @@ define opp_skill_dmg_position3 = []
 define oppmonster1 = ""
 define oppmonster2 = ""
 define oppmonster3 = ""
+define event_prolog = False
+
+define farright = Position(xpos=0.1)
+define farleft = Position(xpos=0.9)
+
+image opppythomon = ConditionSwitch("opp_mon1 == True and event_prolog == True", "pythomon_opp/dodo opp.png")

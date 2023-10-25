@@ -13,13 +13,19 @@ label battle_loop:
     while True:
         # your turn
         ####################################################
-        call change_mon
+        call change_mon 
         call yourmon_turn
         call cri_chance_you
+        show pythomon1 at farright with move
         "[yourmonster] used [skill_di]!"
         $ mon = yourmonster
         call skill_buff_debuff
         $ mon_hp -= dmg
+        if dmg != 0:
+            show opppythomon at right with hpunch
+        else:
+            show pythomon1 at left with pixellate
+        show pythomon1 at left with move
         if cri_success == True:
             "A CRITICAL HIT!"
             $ cri_success = False
@@ -28,6 +34,7 @@ label battle_loop:
         if mon_hp <= 0 and opp_mon2 == False and opp_mon3 == True:
             $ opp_mon3 = False
         if mon_hp <= 0 and (opp_mon2 == False or opp_mon3 == False):
+            hide opppythomon with dissolve
             "[oppmonster] faint!"
             "You win!"
             hide screen hp_bars_1v1
@@ -53,10 +60,16 @@ label battle_loop:
         ####################################################
         call oppmon_turn
         call cri_chance_opp
+        show opppythomon at farleft with move
         "[oppmonster] used [skill_di]!"
         $ mon = oppmonster
         call skill_buff_debuff
         $ your_hp -= dmg
+        if dmg != 0:
+            show pythomon1 at left with hpunch
+        else:
+            show opppythomon at right with pixellate
+        show opppythomon at right with move
         if cri_success == True:
             "A CRITICAL HIT!"
             $ cri_success = False
@@ -75,6 +88,11 @@ label battle_loop:
     # hide screen hp_bars_1v1
     return
 # return
+
+
+
+
+
 
 #yourskill!
 label yourmon_turn:
@@ -110,6 +128,10 @@ label change_mon:
                 $ your_hp = current_hp[0]
                 show screen hp_bars_1v1
                 $ change_back = True
+                hide pythomon2
+                hide pythomon3
+                show pythomon1 at left
+                show opppythomon at right
                 call yourmon_turn
             "[yourmonster2]" if mon2 == True:
                 $ yourmonster = yourmonster3
@@ -120,6 +142,8 @@ label change_mon:
                 $ your_hp = current_hp[1]
                 show screen hp_bars_1v1
                 $ change_back = True
+                show pythomon3 at left
+                show opppythomon at right
                 call yourmon_turn
             "[yourmonster2]" if mon2 == True:
                 $ yourmonster = yourmonster3
@@ -130,6 +154,8 @@ label change_mon:
                 $ your_hp = current_hp[2]
                 show screen hp_bars_1v1
                 $ change_back = True
+                show pythomon2 at left
+                show opppythomon at right
                 call yourmon_turn
             "back" if change_back == True:
                 call yourmon_turn
