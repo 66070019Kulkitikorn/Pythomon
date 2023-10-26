@@ -1,25 +1,15 @@
+
 label prologue:
-    scene bg room
-    show Professor Hiyajou
-    Hiyajou "Welcome LABMEM:011"
-    Hiyajou "To the Simulation World!"
-    Hiyajou "You can call me Professor Hiyajou"
-    show Professor Hiyajou confused
-    Hiyajou "Wait what the fuc"
-    show Professor Hiyajou nice
-    Hiyajou "I didn't understand how to make combat system good i guess?"
+    #เขีนนdialogueตรงนี้
+    scene black
+    centered "pine apple pizza is good"
+    Hiyajou " "
 
 #   #Insert name here!
     Hiyajou "So... What's your name?"
     $ povname = renpy.input("What's your name?", length = 15)
 
-    MC "Uh... My name is [povname]"
-    Hiyajou "I see....[povname]. You ARE the choosen one!!!"
-    Hiyajou "Thank for testing i guess?"
-    Hiyajou "oh this is test so..."
-    define cat = False
-    define dophin = False
-    define ant = False
+    #เลือกตัวละคร
     menu select_mon:
         Hiyajou "Select one monster"
         "Cat":
@@ -40,7 +30,6 @@ label prologue:
     image pythomon1 = ConditionSwitch("cat", "pythomon_yours/cat yours.png", "dophin", "pythomon_yours/dophin yours.png", "ant", "pythomon_yours/ant yours.png")
     $ mon1 = True
     $ mon1_hp = 100
-    Hiyajou "OK LEST TEST"
     $ event_prolog = True
     $ opp_mon1 = True
     $ mon_max_hp = 100
@@ -51,4 +40,3 @@ label prologue:
     hide Professor Hiyajou nice with dissolve
     call battle_loop
     hide screen hp_bars_1v1
-    Hiyajou "WOW that nice"
