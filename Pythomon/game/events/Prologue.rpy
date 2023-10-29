@@ -12,31 +12,48 @@ label prologue:
     #เลือกตัวละคร
     menu select_mon:
         Hiyajou "Select one monster"
-        "Cat":
-            $ yourmonster1 = "cat"
-            $ skill_position1 = ["Trasure Sign \"Ying-Yang Orb", "Divine Arts \"Wind God Kick", "Sign I \"lDream Orb String", "Divine Spirit \"Fantasy Seal"]
-            $ skill_dmg_position1 = [10, 10, 20, 1000]
-            $ cat = True
-        "dophin":
-            $ yourmonster1 = "dophin"
-            $ skill_position1 = ["Star Sign \"Meteoric Shower", "Light Sign \"Luminous Strike", "Comet \"Blazing Star", "Love Sign \"MasterSpark"]
-            $ skill_dmg_position1 = [10, 10, 20, 1000]
-            $ dophin = True
-        "ant":
-            $ yourmonster1 = "ant"
-            $ skill_position1 = ["Esoterica \"Gray Thaumaturgy", "Sea Opening \"Moses's Miracle", "Miracle \"God's Wind", "Snake Sign \"Orochi of Ancient Times"]
-            $ skill_dmg_position1 = [10, 10, 20, 1000]
-            $ ant = True
-    image pythomon1 = ConditionSwitch("cat", "pythomon_yours/cat yours.png", "dophin", "pythomon_yours/dophin yours.png", "ant", "pythomon_yours/ant yours.png")
+        "Fox":
+            $ yourmonster = "Fox"
+            $ your_max_full = 225
+            $ skill_position1 = ["Scratch", "Bite", "Amazing Senses"]
+            $ skill_dmg_position1 = [50, 25, "Amazing Senses"]
+            $ Fox = True
+        "Dophin":
+            $ yourmonster = "Dophin"
+            $ your_max_full = 275
+            $ skill_position1 = ["Takle", "Strike", "Playfulness"]
+            $ skill_dmg_position1 = [15, 45, "Playfulness"]
+            $ Dophin = True
+        "Mantis":
+            $ yourmonster = "Mantis"
+            $ your_max_full = 180
+            $ skill_position1 = ["Chop", "Slash", "Stealth Mastery"]
+            $ skill_dmg_position1 = [10, 60, "Stealth Mastery"]
+            $ Mantis = True
+    image pythomon1 = ConditionSwitch("Fox", "pythomon_yours/fox yours.png", "Dophin", "pythomon_yours/dophin yours.png", "Mantis", "pythomon_yours/mantis yours.png")
     $ mon1 = True
-    $ mon1_hp = 100
     $ event_prolog = True
     $ opp_mon1 = True
-    $ mon_max_hp = 100
-    $ mon_hp = mon_max_hp
-    $ oppmonster = "Dodo"
-    $ opp_skill_position1 = ["Tackle", "Pinch", "Hard tackle", "Dodo noise"]
-    $ opp_skill_dmg_position1 = [10, 15, 20, 0]
+    ##################################
+#############################################
+    $ opp_mon_hp = 200
+    $ opp_skill_position1 = ["Tackle", "Pinch", "Wing Flap"]
+    $ opp_skill_dmg_position1 = [30, 45, "Wing Flap"]
+    $ oppmonster1 = "Dodo"
+#############################################
+    call reset
     hide Professor Hiyajou nice with dissolve
     call battle_loop
-    hide screen hp_bars_1v1
+    hide pythomon1 with dissolve
+    $ opp_mon1 = False
+    "here some another test battle !"
+#############################################
+    $ opp_mon2 = True
+    $ opp_mon_hp = 200
+    $ opp_skill_position1 = ["Battle fang", "Strike", "Far-sighted focus"]
+    $ opp_skill_dmg_position1 = [45, 60, "Far-sighted focus"]
+    $ oppmonster1 = "Cat"
+#############################################
+    call reset
+    call battle_loop
+    "That the end of test what do you think?"
