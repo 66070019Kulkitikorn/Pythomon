@@ -3,7 +3,7 @@ label prologue:
     #เขีนนdialogueตรงนี้
     scene bg black
     centered "pine apple pizza is good"
-    Hiyajou "สวัสดี Labmem:011"
+    Hiyajou "Hello Labmem:011"
 
 #   #Insert name here!
     Hiyajou "So... What's your name?"

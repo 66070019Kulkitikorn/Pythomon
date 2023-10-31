@@ -52,3 +52,16 @@ image oppythomon = ConditionSwitch("opp_mon1 == True and event_prolog == True", 
 "opp_mon2 == True and event_prolog == True", "pythomon_yours/cat yours.png")
 
 define con = ""
+
+label win_cont:
+    if mon_hp <= 0:
+        hide oppythomon with dissolve
+        "You Win!"
+        hide screen hp_bars_1v1
+        call battle_loop
+    elif your_hp <= 0:
+        hide pythomon1 with dissolve
+        "You Lose :("
+        hide screen hp_bars_1v1
+        $ renpy.quit()
+    return

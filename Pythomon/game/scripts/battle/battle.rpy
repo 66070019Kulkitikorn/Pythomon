@@ -190,7 +190,7 @@ label cri_chance_opp:
 #     return
 
 label battle_loop:
-    while True:
+    while mon_hp > 0:
         show pythomon1 at left
         show oppythomon at right
         show screen hp_bars_1v1
@@ -205,16 +205,16 @@ label battle_loop:
         call cri_chance_you
         call cri_chance_opp
         call rock_paper_cissors_check
-        if mon_hp <= 0:
-            hide oppythomon with dissolve
-            "You Win!"
-            hide screen hp_bars_1v1
-            return
-        elif your_hp <= 0:
-            hide pythomon1 with dissolve
-            "You Lose :("
-            hide screen hp_bars_1v1
-            $ renpy.quit()
+        # if mon_hp <= 0:
+        #     hide oppythomon with dissolve
+        #     "You Win!"
+        #     hide screen hp_bars_1v1
+        #     return
+        # elif your_hp <= 0:
+        #     hide pythomon1 with dissolve
+        #     "You Lose :("
+        #     hide screen hp_bars_1v1
+        #     $ renpy.quit()
         $ your_turn = False
         $ opp_turn = False
     return
@@ -264,6 +264,7 @@ label rock_paper_cissors_check:
         # show pythomon1 at farright with hpunch
         # $ mon_hp -= dmg
         show pythomon1 at left with move
+        call win_cont
 #########################################################
 #########################################################
     elif (yours, opp) in rps_draw:
@@ -276,13 +277,15 @@ label rock_paper_cissors_check:
         $ your_turn = True
         call your_skill
         show pythomon1 at left with move
-#
-        show oppythomon at farleft with move
-        "[oppmonster] used [skill_di_opp]!"
+        call win_cont
+        if mon_hp > 0:
+            show oppythomon at farleft with move
+            "[oppmonster] used [skill_di_opp]!"
         # show oppythomon at farleft with pixellate
-        $ opp_turn = True
-        call opp_skill
-        show oppythomon at right with move
+            $ opp_turn = True
+            call opp_skill
+            show oppythomon at right with move
+            call win_cont
 #######################################################
 #######################################################
     elif (opp, yours) in rps_beats_attack:
@@ -294,6 +297,7 @@ label rock_paper_cissors_check:
         $ opp_turn = True
         call opp_skill
         show oppythomon at right with move
+        call win_cont
     return
 #######################################################
 #######################################################
