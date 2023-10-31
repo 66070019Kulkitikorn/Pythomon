@@ -4,6 +4,7 @@ image Professor Hiyajou nice = "Professor Hiyajou Nice.png"
 
 
 
+
 # image player_battle = TransitionConditionSwitch(Dissolve(0.5, alpha=True),
 #     "currentplayer == a","images/char/glow/player_battle.webp",
 #     "a.dead == True","images/char/blank.webp",

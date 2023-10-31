@@ -14,8 +14,8 @@
 # define yourmonster2 = ""
 # define yourmonster3 = ""
 
-# define your_cri = 10
-# define opp_cri = 10
+define your_cri = 10
+define opp_cri = 10
 # define cri_success = False
 # define skill_di = ""
 
@@ -50,3 +50,5 @@ define farleft = Position(xpos=0.9)
 
 image oppythomon = ConditionSwitch("opp_mon1 == True and event_prolog == True", "pythomon_opp/dodo opp.png",
 "opp_mon2 == True and event_prolog == True", "pythomon_yours/cat yours.png")
+
+define con = ""

@@ -10,5 +10,6 @@ label reset:
     $ your_hp = your_max_full
     $ skill_position = skill_position1.copy()
     $ skill_dmg_position = skill_dmg_position1.copy()
+    $ dive = False
 ###################################################
 return

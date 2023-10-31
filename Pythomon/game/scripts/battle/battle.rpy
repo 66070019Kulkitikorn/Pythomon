@@ -157,20 +157,20 @@
 #             "back" if change_back == True:
 #                 call yourmon_turn
 
-# #Critical chance start from 1/10
-# label cri_chance_you:
-#     $ number = renpy.random.randint(1, your_cri)
-#     if number == 1:
-#         $ dmg = dmg * 2
-#         $ cri_success = True
-#     return
+#Critical chance start from 1/10
+label cri_chance_you:
+    $ number = renpy.random.randint(1, your_cri)
+    if number == 1:
+        $ dmg = dmg * 2
+        $ cri_success = True
+    return
 
-# label cri_chance_opp:
-#     $ number = renpy.random.randint(1, opp_cri)
-#     if number == 1:
-#         $ dmg = dmg * 2
-#         $ cri_success = True
-#     return
+label cri_chance_opp:
+    $ number = renpy.random.randint(1, opp_cri)
+    if number == 1:
+        $ dmg_opp = dmg * 2
+        $ cri_success = True
+    return
 
 # #opp turn!
 # label oppmon_turn:
@@ -202,6 +202,8 @@ label battle_loop:
         hide your_pick with dissolve
         hide opp_pick with dissolve
         # hide opp_pick with dissolve
+        call cri_chance_you
+        call cri_chance_opp
         call rock_paper_cissors_check
         if mon_hp <= 0:
             hide oppythomon with dissolve
@@ -229,6 +231,7 @@ label choose_skill_player:
             $ skill_di = skill_position[1]
             $ yours = "Rock"
         "[skill_position[2]]":
+            $ dmg = skill_dmg_position[2]
             $ skill_di = skill_position[2]
             $ yours = "Paper"
     return
@@ -248,81 +251,77 @@ label choose_skill_opp:
         $ opp = "Paper"
     return
 
-default rps_beats_attack = [('Rock', 'Scissors'), ('Scissors', 'Paper')]
-default rps_beats_buff = [('Paper', 'Rock')]
-default rps_draw_buff = [('Paper', 'Paper')]
+default rps_beats_attack = [('Rock', 'Scissors'), ('Scissors', 'Paper'), ('Paper', 'Rock')]
+default rps_draw = [('Paper', 'Paper'), ('Rock', 'Rock'), ('Scissors', 'Scissors')]
 
 label rock_paper_cissors_check:
     if (yours, opp) in rps_beats_attack:
         centered "[yourmonster] WIN!"
         show pythomon1 at farright with move
         "[yourmonster] used [skill_di]!"
-        show pythomon1 at farright with hpunch
-        $ mon_hp -= dmg
-        show pythomon1 at left
+        $ con = "win"
+        call your_skill
+        # show pythomon1 at farright with hpunch
+        # $ mon_hp -= dmg
+        show pythomon1 at left with move
 #########################################################
 #########################################################
-    elif (yours, opp) in rps_draw_buff:
+    elif (yours, opp) in rps_draw:
         centered "DRAW!"
+        $ con = "draws"
 #
         show pythomon1 at farright with move
         "[yourmonster] used [skill_di]!"
-        show pythomon1 at farright with pixellate
+        # show pythomon1 at farright with pixellate
         $ your_turn = True
-        call skill_buff_debuff
-        show pythomon1 at left
+        call your_skill
+        show pythomon1 at left with move
 #
         show oppythomon at farleft with move
         "[oppmonster] used [skill_di_opp]!"
-        show oppythomon at farleft with pixellate
+        # show oppythomon at farleft with pixellate
         $ opp_turn = True
-        call skill_buff_debuff
-        show oppythomon at right
+        call opp_skill
+        show oppythomon at right with move
 #######################################################
 #######################################################
     elif (opp, yours) in rps_beats_attack:
+        $ con = "lose"
         centered "[oppmonster] WIN!"
         show oppythomon at farleft with move
         "[oppmonster] used [skill_di_opp]!"
-        show oppythomon at farleft with hpunch
-        $ your_hp -= dmg_opp
-        show oppythomon at right
-#######################################################
-#######################################################
-    elif (opp, yours) in rps_beats_buff:
-        centered "[oppmonster] WIN!"
-        show oppythomon at farleft with move
-        "[oppmonster] used [skill_di_opp]!"
-        show oppythomon at farleft with pixellate
+        # show oppythomon at farleft with pixellate
         $ opp_turn = True
-        call skill_buff_debuff
-        show oppythomon at right
-#######################################################
-#######################################################
-    elif (yours, opp) in rps_beats_buff:
-        centered "[yourmonster] WIN!"
-        show pythomon1 at farright with move
-        "[yourmonster] used [skill_di]!"
-        show pythomon1 at farright with pixellate
-        $ your_turn = True
-        call skill_buff_debuff
-        show pythomon1 at left
-#######################################################
-#######################################################
-    else :
-        centered "DRAW!"
-#
-        show pythomon1 at farright with move
-        "[yourmonster] used [skill_di]!"
-        show pythomon1 at farright with hpunch
-        $ mon_hp -= dmg
-        show pythomon1 at left
-#
-        show oppythomon at farleft with move
-        "[oppmonster] used [skill_di_opp]!"
-        show oppythomon at farleft with hpunch
-        $ your_hp -= dmg_opp
-        show oppythomon at right
-#######################################################
+        call opp_skill
+        show oppythomon at right with move
     return
+#######################################################
+#######################################################
+#     elif (yours, opp) in rps_beats_buff:
+#         centered "[yourmonster] WIN!"
+#         show pythomon1 at farright with move
+#         "[yourmonster] used [skill_di]!"
+#         # show pythomon1 at farright with pixellate
+#         $ your_turn = True
+#         call skill_buff_debuff
+#         show pythomon1 at left with move
+# #######################################################
+# #######################################################
+#     else :
+#         centered "DRAW!"
+# #
+#         show pythomon1 at farright with move
+#         "[yourmonster] used [skill_di]!"
+#         call skill_buff_debuff
+#         # show pythomon1 at farright with hpunch
+#         # $ mon_hp -= dmg
+#         show pythomon1 at left with move
+# #
+#         show oppythomon at farleft with move
+#         "[oppmonster] used [skill_di_opp]!"
+#         call skill_buff_debuff
+#         # show oppythomon at farleft with hpunch
+#         # $ your_hp -= dmg_opp
+#         show oppythomon at right with move
+#######################################################
 
