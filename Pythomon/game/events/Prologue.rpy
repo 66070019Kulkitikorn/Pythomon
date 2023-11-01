@@ -1,19 +1,35 @@
 
 label prologue:
     #เขีนนdialogueตรงนี้
-    scene bg black
+    scene black
     centered "pine apple pizza is good"
-    Hiyajou "Hello Labmem:011"
+    $ povname = renpy.input("YOUR CODE NAME", length = 15)
+    show hiyajou
+    show yuukii at left
+    h "wow"
+    # show hiyajou_test
+    h confused "Hello Labmem:011"
+    h normal "welcome to my lab"
+    h happy "wowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+    wwwwwwww"
 
 #   #Insert name here!
-    Hiyajou "So... What's your name?"
-    $ povname = renpy.input("What's your name?", length = 15)
+    h "So... What's your name?"
+    show hiyajou
     mc angry "uh ok"
     mc lookatme "Can i leave?"
+    h confused"not now"
+    h normal "maybe not"
+    h happy "maybe yes"
+    # show hiyajou #show ทุกครั้งที่ตัวอื่นพูด
+    mc lookatme "Why me?"
+    mc "IM LOOKING FOR YOU"
+    h confused "are you sure?"
 
     #เลือกตัวละคร
     menu select_mon:
-        Hiyajou "Select one monster"
+        h "Select one monster"
         "Fox":
             $ yourmonster = "Fox"
             $ your_max_full = 900

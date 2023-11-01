@@ -1,7 +1,7 @@
 label skill_buff_debuff:
     if your_turn == True:
         call your_skill
-    if opp_turn ==  True:
+    elif opp_turn ==  True:
         call opp_skill
 return
 
@@ -27,7 +27,7 @@ label your_skill:
             "[dmg] Damage!"
         else:
             show pythomon1 at farright with hpunch
-            $ dmg += 100
+            $ dmg += 200
             $ mon_hp -= dmg
             "[dmg] Damage! High damage on draw!"
 ##########################################################
@@ -65,7 +65,7 @@ label your_skill:
     elif skill_di == "Leap":
         if dive == True:
             show pythomon1 at farright with hpunch
-            $ dmg += 100
+            $ dmg += 150
             $ mon_hp -= dmg
             "[dmg] Damage!"
         else:
@@ -75,7 +75,7 @@ label your_skill:
     elif skill_di == "Flipper":
         if dive == True:
             show pythomon1 at farright with hpunch
-            $ dmg += 100
+            $ dmg += 150
             $ mon_hp -= dmg
             "[dmg] Damage!"
         else:
@@ -85,7 +85,7 @@ label your_skill:
     elif skill_di == "Dive":
         show pythomon1 at farright with pixellate
         $ dive = True
-        "Dolphin start to dive!!"
+        "Dolphin start to dive!! Raises ATK, loses buff after taking DMG."
 return
 
 label opp_skill:
