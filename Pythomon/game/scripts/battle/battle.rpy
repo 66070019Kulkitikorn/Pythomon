@@ -267,7 +267,7 @@ label rock_paper_cissors_check:
         call your_skill
         # show pythomon1 at farright with hpunch
         # $ mon_hp -= dmg
-        if cri_success_you == True:
+        if cri_success_you == True and dmg > 0:
             "A critical hit!"
         show pythomon1 at left with move
         call win_cont
@@ -282,7 +282,7 @@ label rock_paper_cissors_check:
         # show pythomon1 at farright with pixellate
         $ your_turn = True
         call your_skill
-        if cri_success_you == True:
+        if cri_success_you == True and dmg > 0:
             "A critical hit!"
         show pythomon1 at left with move
         call win_cont
@@ -292,7 +292,7 @@ label rock_paper_cissors_check:
         # show oppythomon at farleft with pixellate
             $ opp_turn = True
             call opp_skill
-            if cri_success_mon == True:
+            if cri_success_mon == True and dmg_opp > 0:
                 "A critical hit!"
             show oppythomon at right with move
             call win_cont
@@ -306,7 +306,7 @@ label rock_paper_cissors_check:
         # show oppythomon at farleft with pixellate
         $ opp_turn = True
         call opp_skill
-        if cri_success_mon == True:
+        if cri_success_mon == True and dmg_opp > 0:
             "A critical hit!"
         show oppythomon at right with move
         call win_cont

@@ -106,7 +106,7 @@ label dodo:
         "[dmg_opp] Damage!"
     elif skill_di_opp == "Flap":
         show oppythomon at farleft with pixellate
-        $ opp_skill_dmg_position[1] = opp_skill_dmg_position[1] + 50
+        $ opp_skill_dmg_position[0] = opp_skill_dmg_position[0] + 50
         $ opp_skill_dmg_position[1] = opp_skill_dmg_position[1] + 50
         "Dodo raise ATK!"
 return
