@@ -54,7 +54,7 @@ label prologue:
     "choose one of the 3 options"
     mc lookatme "Then I’ll go with this one."
     h happy "Oh, good choice! Hope you two get along well."
-    h normal "Anyway, let’s get into topic. Our intel said that we’ve located \"True String\" in the DORM zone. I want you to go check it out."
+    h normal "Anyway, let’s get into topic. Our intel said that we’ve located True String in the DORM zone. I want you to go check it out."
     h "It seems to be in the possession of a girl named  \"Reine\" des abeilles from Hivemind, heard she stole it or something."
     h "You might have to fight her but don’t worry, I’ll send you an AI to assist you."
     h ""She’ll handle all the DNA extractions and teach you how to battle properly."
