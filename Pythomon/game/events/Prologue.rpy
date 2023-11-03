@@ -3,61 +3,66 @@ label prologue:
     #เขีนนdialogueตรงนี้
     scene black with slowdisslove
     $ povname = renpy.input("YOUR CODE NAME", length = 15)
-    centered "Pytho Simulated Universe โลกที่จำลองโลกที่มีระบบนิเวศสำหระบทุกสิ่งมีชีวิตทั้งในอดีตและในปัจจุบัน"
+    centered "Simulated Universe, a constructed world where life from both the past and the present exist in harmony."
 
-    centered "สิ่งมีชีวิตในโลกจำลองแห่งนี้มีสัตว์ทุกชนิดที่สูญพันธุ์ไปแล้วหรือยังไม่สูญพันธุ์ก็แล้วแต่ ได้รับการพัฒนาเพื่อจุดประสงค์ในการวิจัยในตอนแรก"
+    centered "Extinct species are brought back and developed to be compatible with this world resembling the present days, all for the sake of research."
 
-    centered "หลังจากนั้นก็ได้ถูกเผยแพร่สู่สารธารณะ ผู้คนต่างพูดถึงมัน มันอิสระซะจนบอกได้เลยว่าอิสระเกินไปด้วยซ้ำ บางคนก็ตั้งองกรเป็นของตัวเอง บางคนก็ใช้ประโยชน์จากสัตว์ที่สูญพันธุ์ไปแล้วในโลกใบใหม่มาใช้ในเชิงธุรกิจ"
+    centered "It was published to public and was known worldwide, lives in this universe even include humans who chose to be part of the research, some took advantage of the freedom to establish organizations and some tried to use the exclusive, extinct species for business purposes."
 
-    centered "พวกเราLAB:MEM นั้นก็ได้ใช้ประโยชน์จากโลกจำลองนี้เพื่อการวิจัยหา The Apex predator สุดยอดสิ่งมีชีวิตทั้งปวง"
+    centered "We, the LABMEM, uses the Simulated Universe for the sole purpose of researching TAP, the perfect lifeform."
 
-    centered "จนกระทั่ง Project Prologue ได้ ขโมยข้อมูลของLABพวกเราไป พวกเราก็เลยต้องตามหาพวกProject Prologueจากโลกนั้นเพื่อนำข้อมูลข้อมูลวิจัยกลับคืนมา"
+    centered “Our crucial information was leaked to Project Prologue which leads to our current mission to find and retrieve our intel from them."
 
-    centered "ระหว่างนั้นเราก็ต้องเก็บข้อมูลDNAของพวกสิ่งมีชีวิตไว้เผื่อในการวิจัยด้วย"
+    centered “All the while, collecting the DNA of lifeforms we’ve encountered in our journey to progress our research.”
 
-    centered "นั่นคือสิ่งที่ผมรู้ในตอนนี้"
+    centered "As least that’s what I know so far."
 
-    centered "เนื่องจากผมเป็นเด็กกำพร้า หลังจากที่ครอบครัวผมเสียไปตั้งแต่ยังเด็ก พวกLAB:MEMก็รับผมมาเลี้ยงดูแล้ว"
+    centered "Because my parents passed away since I was a child, I was taken in by the LABMEM."
 
-    centered "[povname]พวกเขาเรียกผมแบบนั้นตั้งแต่ได้เริ่มทำงานมา และนี้ก็คงเป็นอีกภารกิจที่ผมได้รับคำสั่งมาอีกที"
+    centered "Yuuki, that’s what they called me since I’ve started working with them, and this is the start of my next mission."
     show yuukii at left
-    mc "ตอนนี้ผมต้องไปหาProfessor Hiyajouก่อนหล่ะนะ"
+    mc "But first, I have to talk to the professor."
     scene labmem_room with slowdisslove
     show yuukii at left
     show hiyajou
-    h happy "มาไวจังนะ[povname]"
-    mc "ครับ ว่าแต่มีภารกิจอะไรหรอครับ?"
-    nara "Professor hiyajou จ้องมาที่ผมสายตาดูจริงจัง"
-    h "รู้ใช่ไหมว่าพวก Project Prologue ได้ขโมยข้อมูลการวิจัย TAP มาจากพวกเราและหนีไปยัง Pytho Simulated Universe หน่ะ"
-    mc "ทราบครับ"
-    mc "หรือว่า จะให้ผมไปตามหาพวกนั้น และนำข้อมูลกลับคืนมาหรอครับ"
-    h "จริงๆก็ใช่ แต่ว่านายยังไม่เคยเข้าโลก Pytho Simulated Universe เลยนี่นะ"
-    nara "ใช่ ผมยังไม่เคยลองเข้าโลก Pytho Simulated Universe เลยนี่นะ จริงๆจะลองเข้าไปซักหน่อยก็ได้อยู่หรอก แต่ว่าปกติผมจะทำงานอยู่ในโลกแห่งความจริงตลอดไม่ค่อยมีเวลามากขนาดนั้น แต่ก็มีLAB:MEMบางคนที่เข้าไปใน Pytho Simulated Universe เพื่อการวิจัย รู้สึกว่าจะมีแค่ 10 คนมั้งที่ได้เข้าไปในฐานะLAB:MEMไม่ใช่คนธรรมดา"
-    h happy "ก่อนที่นายจะไปถึงขนาดนั้น ชั้นว่านายต้องเริ่มจากงานเล็กๆก่อน"
-    h "แต่ก่อนอื่น ชั้นจะให้นายเลือกคู่หูของนายในภารกิจนี้ก่อนละกัน"
-    nara "Professor hiyajou หยิบของที่ดูคล้ายการ์ดออกมาจากกระเป๋า"
-    h "ปกติการที่จะเข้าไปในโลกของ PSU ควรพกคู่หูไปด้วยซักตัวนะ"
-    h "ในโลกนั้นมีสิ่งที่เรียกว่า Pythomon battle อยู่หน่ะ ผู้คนมักจะนำสัตว์หรือคู่หูในนั้นมาต่อสู้กัน ไม่ว่าจะเป็นการละเล่นหรือการต่อรองอะไรต่างๆ"
-    h confused "ถึงแม้ว่าชั้นจะคิดว่ามันเพิ่งดวงไปหน่อยก็เถอะ"
-    mc nervous "ดวงหรอครับ?"
-    h "เดี๋ยวเข้าไปนายก็เข้าใจเอง"
-    h normal "ก่อนอื่น ฉันจะให้นายเลือก 3 ตัวจากทั้ง 3 factions"
-    h "ตัวแรก Fox จาก beast faction มีดาเมทโบนัสถ้าหากทอยเสมอ"  
-    h "ตัวที่สอง Dophin จาก ocean faction เพิ่มพลังได้จากสถานะ dive"
-    h "ตัวสุดท้าย Mantis จาก insect faction ดาเมทแรงมากแต่ก็ตัวบางมากๆเช่นเดียวกัน"
-    h normal "นายเลือกมาซักตัวที่นายถูกใจสิ"
-    "<เลือกตัว pythomon>"
-    mc lookatme "ผมเลือก <pythomon> ครับ"
-    h happy "โอ้เลือกได้ดีนิ หวังว่าไอหนูนี่จะเข้ากับนายได้นะ"
-    h normal"เข้าเรื่องเลยละกัน ฉันอยากให้นายไปสำรวจป่าแถวๆ DORM: Den of Roaming Mosquitos ให้หน่อยนะ LAB:MEM คนอื่นๆเขาบอกว่า แถวป่านั้นมี \"True String\" สุดยอดสิ่งมีชีวิตของ insect faction อยู่"
-    h "เจ้าของคือ \"Reine\" des abeilles แห่งHivemindเหมือนว่าเธอจะขโมยไปจาก DORM"
-    h "ฉันอยากให้นายไปสู้กับเธอ แค่สู้ก็พอฉันจะส่งAIไปด้วยเพื่อไปเก็บDNAระหว่างต่อสู้"
-    h "AI ที่ฉันจะส่งไปจะร่วมเดินทางไปกับนายจะสอนนายทุกอย่างเกี่ยวกับ Pythomon battle เอง"
+    h happy "Oh, you’re here, Yuuki."
+    mc "Yes, I came to talk about the next mission."
+    nara "Professor hiyajou is giving a serious look."
+    h "Have you heard that Project Prologue has stolen our research on TAP and escaped to the Simulated Universe?"
+    mc "I’ve heard about it."
+    mc "Could it be that my mission is to go after them and retrieve the intel?"
+    h "Basically, yes. But you’ve never been in the Simulated Universe, have you?"
+    mc "That’s right. I’ve been thinking of trying it out but I’m already too busy with the real world for that."
+    mc "I’ve heard that some lab members entered it for research, though. And I’ve seen about 10 of them entering it once in a while."
+    mc "Still, they all entered for research purposes."
+    h happy "Let’s not dive in too deep and listen to me first..."
+    h "I want you to choose your partner for this mission."
+    nara "Professor hiyajou The professor takes out what appears to be a set of cards from his bag."
+    h "You won’t survive in the simulated universe without one of these!"
+    mc "People in the simulated universe likes to play poker?"
+    h "Well, you’re half right about the luck part."
+    h "In the simulated universe, pythomon battles are very centralized, they pitch their creatures against each other for various purposes like gambling or just playing around."
+    h confused "Kinda like Pokemon?"
+    mc nervous "Poke-what?"
+    h "Anyway, you will get it with practice."
+    h normal "First, choose one of the 3 from their respective factions."
+    h "First is Mantis from the insect faction, he deals a lot of damage but also takes a lot."  
+    h "Next is Fox from the beast faction, he’s stronger when the result was a draw."
+    h "The last but not least is Dolphin from the ocean faction, she’s stronger after entering the “Dive” state."
+    h normal "Now choose the one you like the most!"
+    mc "(Is this animal abuse..?)"
+    "choose one of the 3 options"
+    mc lookatme "Then I’ll go with this one."
+    h happy "Oh, good choice! Hope you two get along well."
+    h normal "Anyway, let’s get into topic. Our intel said that we’ve located \"True String\" in the DORM zone. I want you to go check it out."
+    h "It seems to be in the possession of a girl named  \"Reine\" des abeilles from Hivemind, heard she stole it or something."
+    h "You might have to fight her but don’t worry, I’ll send you an AI to assist you."
+    h ""She’ll handle all the DNA extractions and teach you how to battle properly."
     show hiyajou
-    mc "โอเคครับ แล้วจะให้ผมไปเมื่อไหร่"
-    h happy "ตอนนี้แหละ แค่นายหลับตาถือไพ่นั่นเอาไว้ และสวมหมวกนี่นายก็สามารถเข้าไปในโลกPytho Simulated Universe ได้แล้ว"
-    nara "Professor hiyajou ยื่นหมวกให้และผมก็สวมทันทีพร้อมถือเอาไว้ ตอนนี้ผมมองไม่เห็นอะไรทั้งนั้น"
-    h lookat "เอาละขอให้โชคดี"
+    mc "Sweet, so when do I start?"
+    h happy "Right now. Hold that card in your hand and equip this device on your head and you’ll get sent to the Simulated Universe right away."
+    nara "The professor gives Yuuki a smile as he puts on the device, blinding his vision."
+    h lookat "I’ll send you somewhere around the forest then.Good luck!"
     hide labmem_room with dissolve
     call hide_all
 
