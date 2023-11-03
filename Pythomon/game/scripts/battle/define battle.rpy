@@ -34,6 +34,10 @@ define opp_cri = 10
 # define oppmonster1 = ""
 # define oppmonster2 = ""
 # define oppmonster3 = ""
+define df0 = False
+define df1 = False
+define df2 = False
+
 define Paper = "Paper"
 define Scissors = "Scissors"
 define Rock = "Rock"
@@ -48,8 +52,9 @@ define opp_turn = False
 define farright = Position(xpos=0.1)
 define farleft = Position(xpos=0.9)
 
-image oppythomon = ConditionSwitch("opp_mon1 == True and event_prolog == True", "pythomon_opp/dodo opp.png",
-"opp_mon2 == True and event_prolog == True", "pythomon_yours/cat yours.png")
+image oppythomon = ConditionSwitch("df0 == True", "pythomon_opp/dodo.png",
+"df1 == True", "pythomon_opp/ant.png",
+"df2 == True", "pythomon_opp/dragonfly.png")
 
 define con = ""
 
@@ -63,5 +68,5 @@ label win_cont:
         hide pythomon1 with dissolve
         "You Lose :("
         hide screen hp_bars_1v1
-        $ renpy.quit()
+        call gameover 
     return

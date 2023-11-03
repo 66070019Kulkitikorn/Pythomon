@@ -58,6 +58,8 @@ label prologue:
     h happy "ตอนนี้แหละ แค่นายหลับตาถือไพ่นั่นเอาไว้ และสวมหมวกนี่นายก็สามารถเข้าไปในโลกPytho Simulated Universe ได้แล้ว"
     nara "Professor hiyajou ยื่นหมวกให้และผมก็สวมทันทีพร้อมถือเอาไว้ ตอนนี้ผมมองไม่เห็นอะไรทั้งนั้น"
     h lookat "เอาละขอให้โชคดี"
+    hide labmem_room with dissolve
+    call hide_all
 
     #เลือกตัวละคร
     menu select_mon:
@@ -82,29 +84,30 @@ label prologue:
             $ Mantis = True
     image pythomon1 = ConditionSwitch("Fox", "pythomon_yours/fox yours.png", "Dophin", "pythomon_yours/dophin yours.png", "Mantis", "pythomon_yours/mantis yours.png")
     $ mon1 = True
-    $ event_prolog = True
-    ##################################
-#############################################
-    $ opp_mon1 = True
-    $ opp_mon_hp = 500
-    $ opp_skill_position1 = ["Peck", "Kick", "Flap"]
-    $ opp_skill_dmg_position1 = [95, 99, 0]
-    $ oppmonster1 = "Dodo"
-#############################################
-    call reset
-    hide Professor Hiyajou nice with dissolve
-    call battle_loop
-    hide pythomon1 with dissolve
-    $ opp_mon1 = False
-    "here some another test battle !"
-#############################################
-#     $ opp_mon2 = True
-#     $ opp_mon_hp = 200
-#     $ opp_skill_position1 = ["Battle fang", "Strike", "Far-sighted focus"]
-#     $ opp_skill_dmg_position1 = [45, 60, "Far-sighted focus"]
-#     $ oppmonster1 = "Cat"
+    call df0
+#     $ event_prolog = True
+#     ##################################
+# #############################################
+#     $ opp_mon1 = True
+#     $ opp_mon_hp = 500
+#     $ opp_skill_position1 = ["Peck", "Kick", "Flap"]
+#     $ opp_skill_dmg_position1 = [95, 99, 0]
+#     $ oppmonster1 = "Dodo"
 # #############################################
 #     call reset
+#     hide Professor Hiyajou nice with dissolve
 #     call battle_loop
-    $ opp_mon1 = False
-    "That the end of test what do you think?"
+#     hide pythomon1 with dissolve
+#     $ opp_mon1 = False
+#     "here some another test battle !"
+# #############################################
+# #     $ opp_mon2 = True
+# #     $ opp_mon_hp = 200
+# #     $ opp_skill_position1 = ["Battle fang", "Strike", "Far-sighted focus"]
+# #     $ opp_skill_dmg_position1 = [45, 60, "Far-sighted focus"]
+# #     $ oppmonster1 = "Cat"
+# # #############################################
+# #     call reset
+# #     call battle_loop
+#     $ opp_mon1 = False
+#     "That the end of test what do you think?"

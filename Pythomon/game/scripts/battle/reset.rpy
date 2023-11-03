@@ -1,11 +1,13 @@
 label reset:
 ###################################################
+    $ cri_chance_opp = 10
     $ oppmonster = oppmonster1
     $ mon_max_hp = opp_mon_hp
     $ mon_hp = mon_max_hp
     $ opp_skill_position =  opp_skill_position1.copy()
     $ opp_skill_dmg_position = opp_skill_dmg_position1.copy()
 ##################################################
+    $ cri_chance_you = 10
     $ your_max_hp = your_max_full
     $ your_hp = your_max_full
     $ skill_position = skill_position1.copy()
