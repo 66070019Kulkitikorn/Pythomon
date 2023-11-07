@@ -1,39 +1,21 @@
-# define mon1 = False
-# define mon2 = False
-# define mon3 = False
-# define mon1_hp = 0
-# define mon2_hp = 0
-# define mon3_hp = 0
-# define skill_position1 = []
-# define skill_position2 = []
-# define skill_position3 = []
-# define skill_dmg_position1 = []
-# define skill_dmg_position2 = []
-# define skill_dmg_position3 = []
-# define yourmonster1 = ""
-# define yourmonster2 = ""
-# define yourmonster3 = ""
+image mantis_card:
+    "select/mantis_card.png"
+    zoom 0.85
+
+image dophin_card:
+    "select/dophin_card.png"
+    zoom 0.85
+
+image fox_card:
+    "select/fox_card.png"
+    zoom 0.85
 
 define your_cri = 10
 define opp_cri = 10
 # define cri_success = False
 # define skill_di = ""
 
-# define opp_mon1 = False
-# define opp_mon2 = False
-# define opp_mon3 = False
-# define opp_mon1_hp = 0
-# define opp_mon2_hp = 0
-# define opp_mon3_hp = 0
-# define opp_skill_position1 = []
-# define opp_skill_position2 = []
-# define opp_skill_position3 = []
-# define opp_skill_dmg_position1 = []
-# define opp_skill_dmg_position2 = []
-# define opp_skill_dmg_position3 = []
-# define oppmonster1 = ""
-# define oppmonster2 = ""
-# define oppmonster3 = ""
+
 define df0 = False
 define df1 = False
 define df2 = False

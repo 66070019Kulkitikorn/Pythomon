@@ -32,6 +32,9 @@ label df2:
     py "เหมือนจะมีแยกทางอีกแล้วนะ ไปทางไหนดี?"
     menu df2_select2:
         "เลี้ยวซ้าย":
+            call df0_fight
         "เดินตรงไป":
+            call df0_fight
         "เลี้ยวขวา":
+            call df0_fight
 

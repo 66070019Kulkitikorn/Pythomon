@@ -42,7 +42,7 @@ label your_skill:
             show pythomon1 at farright with hpunch
             pause 0.3
             play audio "Damage3.ogg"
-            $ dmg += 200
+            $ dmg += 300
             $ mon_hp -= dmg
             "[dmg] Damage! High damage on draw!"
 ##########################################################

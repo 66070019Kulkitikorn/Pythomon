@@ -7,7 +7,7 @@
 # define your_max_hp = 100
 # define your_hp = your_max_hp
 label start:
-    jump prologue
+    jump prologuee
 
 # label battle_loop:
 #     call battle
