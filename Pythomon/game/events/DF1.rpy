@@ -1,12 +1,12 @@
 label df1:
-    "พวกเราเดินตรงมาตามทางในป่าไปเรื่อยๆจนกระทั่ง"
-    #มดออกมา
-    py "มด?"
-    mc "ฉันว่าเราอย่าไปยุ่งดีกว่านะ แค่มดตัวน้อยๆอย่ารังแก---"
-    py "ยังไงก็ต้องสู้"
-    mc "เดี๋ยว ทำไมเราต้องสู้กับมด---"
-    py "เ พื่ อ ก า ร วิ จั ย"
-    mc "ห๊ะ----"
+    "We make our way through the forest until..."
+    #An ant shows up
+    py "An ant?"
+    mc "Yeah, no jack. What do you think it was?"
+    py "Let's fight it."
+    mc "Wait, you just said it was an ant."
+    py "Fight. It."
+    mc "Oh, geez..."
     #############################################
     $ df1 = True
     $ opp_mon_hp = 888
@@ -21,13 +21,13 @@ label df1:
     hide pythomon1 with dissolve
     $ df1 = False
 #############################################
-    mc "ถึกเอาเรื่องเลยแฮะ"
-    mc "เธอนี่โหดร้ายใช่เล่นเลยแฮะ"
-    py "ก็พวกProject Prologueขโมยไปซะเหี้ยนเลย ยังไงก็ต้องทำแหละ"
-    py "ฉันบันทึกเรียบร้อยแล้ว พวกเราเดินหน้าต่อเถอะ"
-    "พวกLABMEMคนก่อนๆ นี่โหดร้ายกันขนาดนี้รึป่าวนะ?"
+    mc "That one was definitely tougher than Lemon."
+    mc "Anyway, not a fan of peace?"
+    py "Since our intel was stolen by Project Prologue, it's best we accumulate some more data."
+    py "Anyway, I recorded it's DNA. Let's keep going."
+    "Not a hint of symphathy, huh. Had no idea LAB:MEMB was this cruel at work."
     menu df1_next:
-        "เดินตรงไป":
+        "Forward!":
             scene black with slowdisslove
             call df2
-        # "เลี้ยวซ้าย":
+        # "Left!":
