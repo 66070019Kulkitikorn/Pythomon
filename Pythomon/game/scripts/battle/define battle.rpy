@@ -19,6 +19,12 @@ define opp_cri = 10
 define df0 = False
 define df1 = False
 define df2 = False
+define df3_1 = False
+define df3_2 = False
+define df4 = False
+define df5 = False
+define bdf_2 = False
+define bdf_3 = False
 
 define Paper = "Paper"
 define Scissors = "Scissors"

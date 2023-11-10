@@ -17,8 +17,8 @@ label df3_2:
     "และทำไมมีแต่พวก Project Prologue อยู่แถวนี้กัน?"
     py "เหมือนจะมีแยกทางอีกแล้วนะ ไปทางไหนดี?"
     ###choice###
-        "เดินตรงไป":
-            # call df0_fight
-        "เลี้ยวขวา":
-            # call df0_fight
+        # "เดินตรงไป":
+        #     # call df0_fight
+        # "เลี้ยวขวา":
+        #     # call df0_fight
     

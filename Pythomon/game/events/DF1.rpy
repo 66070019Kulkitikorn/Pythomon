@@ -1,6 +1,10 @@
 label df1:
+    scene forest background with dissolve
     "We make our way through the forest until..."
     #An ant shows up
+    show bluepy 
+    show pychan with dissolve
+    show yuukii at left
     py "An ant?"
     mc "Yeah, no jack. What do you think it was?"
     py "Let's fight it."
@@ -16,7 +20,8 @@ label df1:
 #############################################
     call reset
     call hide_all
-    scene black with slowdisslove
+    play music "audio/bgm/battle.mp3" loop
+    scene forest background blur with slowdisslove
     call battle_loop
     hide pythomon1 with dissolve
     $ df1 = False

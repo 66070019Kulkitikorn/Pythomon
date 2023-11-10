@@ -23,7 +23,7 @@ label prologuee:
     show yuukii at left
     mc "But first, I have to talk to the professor."
     scene labmem_room with slowdisslove
-    play music "audio/Science theme.mp3" loop #fadein
+    play music "audio/bgm/Science theme.mp3" loop #fadein
     show yuukii at left with dissolve
     show hiyajou with dissolve
     h happy "Oh, you're here, [povname]."
@@ -103,7 +103,7 @@ label prologuee:
     show hiyajou
     nara "The professor gives [povname] a smile as he puts on the device, blinding his vision."
     h happy "I'll send you somewhere around the forest then.Good luck!"
-    stop music
+    stop music fadeout 1.0
     call hide_all
     call df0
     #เลือกตัวละคร

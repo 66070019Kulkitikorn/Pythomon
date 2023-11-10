@@ -7,64 +7,89 @@ label df0:
     "I think she likes some kind of baverage... I remember it vividly."
     "I try to reach for the doorknob, but suddenly I am blinded by some kind of blue light around me."
     "When I opened my eyes, a blue-haired girl has appeared in front of me."
+    play music "audio/bgm/pychan theme.mp3" loop
     show bluepy with dissolve
+    show yuukii at left with dissolve
     show pychan
     py "..."
-    "My face is unfazed because I'm used to this kind of things, I knew an AI was gonna show up."
-    py "No reaction... A girl just appeared out of thin air, aren't you surprised?"
+    nara "My face is unfazed because I'm used to this kind of things, I knew an AI was gonna show up."
+    py jeez "No reaction... A girl just appeared out of thin air, aren't you surprised?"
+    show pychan
     mc "I was prepared for it."
-    py "Well, that's too bad. I was really looking forward to it. Are all the humans like this?"
-    mc "Maybe it's just me."
-    "The AI looks around before settling to you."
+    py dotdotdot "Well, that's too bad. I was really looking forward to it. Are all the humans like this?"
+    show pychan
+    mc nervous "Maybe it's just me."
+    nara "The AI looks around before settling to you."
     $ pychanname = "Pychan"
-    py "Let me introduce myself."
-    py "I'm an AI sent my Professor Hiyajou, the name's Pychan."
-    mc "I'm more surprised that the AI technology has developed this much."
+    py nice "Let me introduce myself."
+    py happy "I'm an AI sent my Professor Hiyajou, the name's Pychan."
+    show pychan
+    mc nervous "I'm more surprised that the AI technology has developed this much."
     mc "I thought they would've just sent a tutorial program but you even have free will now?"
-    "Pychan is looking all smug."
+    nara "Pychan is looking all smug."
+    show pychan
     py "Of course!"
-    py "I was sent to make sure your mission go smoothly."
+    py normal "I was sent to make sure your mission go smoothly."
     py "Before we get out of this cottage, let's go over that tutorial program you were talking about."
+    show pychan at right with move
     #Pictures of the RPS cards here
     py "It won't take much of your time, it's just rock paper scissors after all."
     py "The pythomon that won will be the only one who get to act."
     py "In the case that it was a draw, both pythomons will get to act."
-    py "But I'll make sure yours will always go first, I hope that doesn't go against your moral codes!"
-    py "Just remember that luck isn't something I can help you with."
-    mc "Well, this seems easier than expected."
-    mc "Wait, I haven't even introduced myself yet. I'm [povname], nice to meet you."
-    py "But that's just your codename, isn't it. Don't worry, I already know yours."
-    "Wait, how did she know it was a codename..."
+    py nice "But I'll make sure yours will always go first, I hope that doesn't go against your moral codes!"
+    py nervous "Just remember that luck isn't something I can help you with."
+    show pychan
+    mc closeeye "Well, this seems easier than expected."
+    mc normal "Wait, I haven't even introduced myself yet. I'm [povname], nice to meet you."
+    py normal "But that's just your codename, isn't it. Don't worry, I already know yours."
+    show pychan
+    nara "Wait, how did she know it was a codename..."
     py "We should get moving before it's dark."
-    mc "True."
+    mc nervous "True."
+    hide bluepy and pychan and yuuki with dissolve
+    # hide pychan with dissolve
+    # hide yuukii at left with dissolve
+    stop music fadeout 1.0
+    play audio "Open5.ogg"
+    scene forest background
     #Entered Forest
-    "After we leave the cottage, we were surrounded by trees."
-    "Looks like Hiyajou really just dropped us into a forest."
-    "Wait, I think I see someone."
-    "Oh, she already noticed me."
-    show lemon
+    nara "After we leave the cottage, we were surrounded by trees."
+    nara "Looks like Hiyajou really just dropped us into a forest."
+    nara "Wait, I think I see someone."
+    nara "Oh, she already noticed me."
+    play music "audio/bgm/forest theme.mp3" loop
+    show lemon with dissolve
+    show yuukii at left with dissolve
     lemon "!"
-    "She stared at me and paused for a bit before speaking up."
+    nara "She stared at me and paused for a bit before speaking up."
     lemon "Oh, it's the LAB:MEM! Was wondering why I haven't seen you around here."
     $ lemonname = "LEMON"
     lemon "I'm Lemon, my company is the No.1 sponsor of LAB:MEM, you know?"
-    lemon "I regularly work in the simulated universe and for some reason people here call me the Debtor."
+    lemon what "I regularly work in the simulated universe and for some reason people here call me the Debtor."
+    show lemon
     mc "I'm [povname], know the way to the Hive?"
     lemon "Pretty casual, I like it."
     lemon "You wanna meet Reine too, huh?"
     mc "Did you say too?"
-    lemon "I can guess. Heard she's the current boss of the Hivemind group. The last one just up and died so she took over."
+    lemon look "I can guess. Heard she's the current boss of the Hivemind group. The last one just up and died so she took over."
     lemon "Hivemind actually go way back in the real world, now that it's in the simulated universe it's still rejected."
     lemon "Not just because of their old deeds but they also took the True String from the DORM."
+    hide yuukii 
+    show bluepy 
+    show pychan at right with dissolve
+    show yuukii at left
     py "That True Sting she's talking about is the apex of the insect faction, by the way."
     mc "I know, heard it from Hiyajou."
+    hide bluepy 
+    hide pychan 
     lemon "Something's wrong?"
-    mc "Nah, nothing."
-    "Doesn't look like Lemon can see Pychan, guess only I can see her."
+    show lemon
+    mc nervous "Nah, nothing."
+    nara "Doesn't look like Lemon can see Pychan, guess only I can see her."
     mc "So, are you coming to Hivemind too?"
     lemon "Yes, but I have to take care of some business around here first."
     lemon "Say, why don't we have a battle before we part?"
-    mc "That pythomon battle thing, huh."
+    mc nervous "That pythomon battle thing, huh."
     lemon "Exactly! This is your first time, right? Then I'll go easy on you."
     call df0_fight
 
@@ -80,14 +105,25 @@ label df0_fight:
 #############################################
     call reset
     call hide_all
-    scene black with slowdisslove
+    play music "audio/bgm/battle.mp3" loop
+    scene forest background blur with slowdisslove
     call battle_loop
     hide pythomon1 with dissolve
     $ df0 = False
 #############################################
+    play music "audio/bgm/forest theme.mp3" loop
+    scene forest background with dissolve
+    show lemon with dissolve
+    show yuukii at left with dissolve
     lemon "You're pretty good for a good timer!"
+    hide yuukii 
+    show bluepy 
+    show pychan at right with dissolve
+    show yuukii at left
     py "You're pretty good for a good timer!"
     mc "She already said that just keep quiet!"
+    hide bluepy 
+    hide pychan 
     lemon "What did you just say?"
     mc "Oh, nothing. I have a habit of talking to my imaginary friend."
     lemon "Huh. Well, I won't judge. That battle was pretty fun!"
@@ -96,13 +132,22 @@ label df0_fight:
     lemon "Time's out! Next time we meet I hope you will use your real name!"
     "Lemon makes haste and went off in her own way."
     mc "Next time?"
+    hide lemon with dissolve
+    hide yuukii
+    show bluepy 
+    show pychan with dissolve
+    show yuukii at left
     py "Do you know her?"
     mc "Not even familiar."
     py "Putting that aside. Let's see if Lemon gave us the right direction."
     mc "Right."
+    hide bluepy 
+    hide pychan
+    hide yuukii
     menu df0_next:
         "Forward!":
             scene black with slowdisslove
+            stop music fadeout 1.0
             call df1
 
 
