@@ -1,15 +1,15 @@
 label df3_1:
-    #mc = yuki py = pychan
-    "ผมเดินมาซักพักผมก็เจอแมลงตัวแปลกๆ"
-    mc "แมลงอะไรหน่ะ ไม่เคยเห็นมาก่อนแฮะ"
-    py "ในฐานข้อมูลเบื้องต้นของLABMEMก็ไม่เจอนะ"
-    py "อาจจะเป็นแมลงลึกลับหรือเป็น deadmeme ก็ได้"
-    "เหมือนคุ้นๆเห็นเป็นกระแสในinternet อยู่นะ"
-    py "จัดการซะ"
-    mc "เอางั้นเลยนะ?"
-    ##สู้ stickbug ##
-    py "อ่อนแอชะมัด"
-    py "แต่เก็บข้อมูลไว้แล้วแหละ ไปต่อเถอะ"
-    "โลกนี้มันก็มีอะไรแบบนี้ด้วยสินะเนี่ย ถ้าเจอ smurf cat ก็ไม่แปลกใจละ"
-    #choice 
-    "เลี้ยวขวา"
+    #mc = yuki py = pychan
+    "Lemon told us to go straight ahead but I wanted to check out the left wing, and so..."
+    mc "Oh, man. Hiyajou's gonna like this one."
+    py "It doesn't seem to be registered in the database yet, this is a new one."
+    py "By the way, did you say something about Hiyajou?"
+    "I think I remember seeing Hiyajou laughing at one of these."
+    py "Whatever it is, let's stick to the usuals."
+    mc "Committing."
+    ##The legendary stickbug##
+    py "For something so rare, it sure was weak. I had some moves, though."
+    py "Now we could say we're ahead of Project Prologue because we have the data on this."
+    "I don't think being ahead with this one will mean much..."
+    #choice
+    "Right!"
