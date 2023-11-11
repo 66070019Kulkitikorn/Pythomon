@@ -1,17 +1,17 @@
 label df2:
-    "ผมเดินไปเรื่อยๆจนกระทั่งเจอคนไม่คาดคิด"
-    # pl1 = ลูกกระจอก Project Prologue 1
-    pl1 "หืมคนในLABMEMงั้นเรอะ"
-    py "อ้อคนใน Project Prologue นี่เอง"
-    "พอเคยได้ยินมาบ้าง แต่ก็ไม่เคยเจอจริงๆ"
-    pl1 "พวกเรา Project Prologue ต้องหยุดการวิจัยของพวกแกซะ"
-    pl1 "อย่างน้อยชั้นจะไม่ให้แกผ่านไปเด็ดขาด!"
-    mc "ปกติพวก Project Prologue มันเลือดร้อนขนาดนี้เลยหรอ"
-    py "จากฐานข้อมูลบางอย่าง เห็นว่า Project Prologue ให้เงินเยอะถ้าจัดการคนในLABMEMได้"
-    mc "หิวเงินนี่เอง"
-    py "นายคงไม่โดนมันจัดการง่ายๆหรอกใช่มั้ย?"
-    mc "อืมคงงั้นมั้ง"
-    py "อย่ามามั้งสิ!"
+    "We make some more progress and this time..."
+    # pl1 = Prologue Punk 1
+    pl1 "Another LAB:MEM? I guess another win for me, then."
+    py "Grunt talk. So you're from Project Prologue."
+    "Well, let's use this guy to cheer up from the ant fight."
+    pl1 "We, Project Prologue, will put an end to your stupid research!"
+    pl1 "Now, I'll get rid of this labdog, first!"
+    mc "It's called a lapdog... And I'll show you which one of us is it."
+    py "From our intel, these "Prologue Punks" have high bounty on LAB:MEM."
+    mc "For the money, huh? I can dig it."
+    py "Don't sympathize with them!"
+    mc "Yeah, yeah. Whatever, just watch."
+    py "Alright, let's commit!"
     #############################################
     $ df2 = True
     $ opp_mon_hp = 650
@@ -26,15 +26,15 @@ label df2:
     hide pythomon1 with dissolve
     $ df2 = False
 #############################################
-    py "สุดท้ายก็หนีไปจนได้"
-    mc "ต้องตามล่ามั้ย"
-    py "ล่าได้ก็ดี แต่ว่าแค่เก็บงานวิจัยจากdragonflyของมันก็พอละ"
-    py "เหมือนจะมีแยกทางอีกแล้วนะ ไปทางไหนดี?"
+    py "Wow, he retreated even faster than his dragonfly."
+    mc "Do we have to chase him?"
+    py "No need, I already collected his dragonfly's DNA."
+    py "Now which way should we go next?"
     menu df2_select2:
-        "เลี้ยวซ้าย":
+        "Left!":
             call df0_fight
-        "เดินตรงไป":
+        "Forward!":
             call df0_fight
-        "เลี้ยวขวา":
+        "Right!":
             call df0_fight
 
