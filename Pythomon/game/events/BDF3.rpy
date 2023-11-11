@@ -1,15 +1,15 @@
 label bdf3:
-    "พวกเราเดินเข้ามาในป่าต่อไป แต่เหมือนว่าป่าจะมืดผิดปกติ ดูอันตรายแปลกๆ"
-    py "นี่นายยังเข้ามาในBlackDormForestอีกหรอ"
-    py "ถ้าเราเข้าไปลึกกว่านี้เราจะออกไปไม่ได้นะ ฉันขอบอกไว้ก่อน"
-    py "ยิ่งมีตัวอะไรอันตรายๆมาอีก เรารีบออกไปกันเถอะ"
-    "จากนั้น ก็มีแมงป่องออกมาจากพุ่มไม้"
-    mc "แมงป่อง!?"
-    py "ช่วยไม่ได้ ต้องสู้แล้วแหละ"
-    #สู้ Scorpion
-    mc "ถึงจะอันตราย แต่บอบบางงั้นหรอ?"
-    py "เอาจริงๆถ้าประมาทก็แทบจะตายได้เลยนะ"
-    py "แต่เราไม่ควรจะเข้าไปมากกว่านี้แล้ว จริงๆนะ อย่าเข้าไปอีกเลยเหอะ"
-    #choice 
-    "เลี้ยวซ้าย"
-    "เดินตรงไป"
+    "I decide to keep pushing. But the further I push, the darker it becomes."
+    py "You really don’t wanna go back?"
+    py "If we go any deeper, I don’t think you’ll get the choice anymore."
+    py "It will only get more and more dangerous from here, it’s still not too late."
+    "Suddenly, huge stinger pops out of the bush and points straight at me."
+    mc "Let’s leave the decision-making for after I’m done committing it."
+    py "Pray that lady luck is on your side, scorpions pack some deadly punches."
+     Commit the Scorpion
+    mc "It might’ve packed some punches but it couldn’t take much either."
+    py "Don’t get so cocky just because you’re lucky…"
+    py "I don’t think luck alone will be enough after this. Well, have you made your choice?"
+    choice
+    "Left!"
+    "Forward!"
