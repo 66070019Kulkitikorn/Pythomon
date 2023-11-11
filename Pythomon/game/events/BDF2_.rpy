@@ -1,16 +1,18 @@
 label bdf2:
-    "พวกเราเดินเข้ามาในป่าต่อไป แต่เหมือนว่าป่าจะมืดผิดปกติ ดูอันตรายแปลกๆ"
-    py "ฉันได้ยินมาว่าป่าBlackDormForestนี้เป็นป่าอันตรายนะ"
-    py "ถ้าเราเข้ามาลึกกว่านี้เราจะออกไปไม่ได้นะ"
-    py "ฉันว่าอย่าเข้ามาลึกกว่านี้ดีกว่า"
-    "ระหว่างที่ฟังอยู่มีบางอย่างออกมาจากในพุ่ม"
-    mc "ยุงงั้นหรอ!?"
-    py "พูดไม่ทันขาดคำก็ออกมาเลยนะ"
-    mc "งั้นก็ช่วยไม่ได้หล่ะนะ"
-    ##สู้ Mosquito
-    mc "ชั้นว่าอันตรายจริงๆด้วยแฮะ"
-    py "ใช่ไหมหล่ะ ชั้นว่าเราอย่าเข้าไปอีกเลยนะ นี่ รีบออกกันเถอะ"
-    #choice 
-    "เลี้ยวขวา"
-    "เดินตรงไป"
+    "Maybe I took the wrong turn but this section of the forest is oddly hostile."
+    py "Friendly Warning: Just now, we might’ve entered the danger zone."
+    py "If we go any deeper we might never come out."
+    py "It’s still not too late to perform a strategic retreat-"
+    "But it was a little too late. The malaria-inflicting monster has already emerged."
     
+    mc "Don’t worry, I’ve dealt with these every night."
+    py "Where do you think we are? You can’t just swat them with your hands!"
+    mc "Fine, time to commit then."
+    
+    Commit the Mosquito
+    
+    mc "While our pythomon was combat locking the boss, I’m already full of bug bites from the little ones…"
+    py "Now you see? Well, I’ll leave the choice to you. Do you wanna go back or push deeper."
+    choice
+    "Left!"
+    "Forward!"
