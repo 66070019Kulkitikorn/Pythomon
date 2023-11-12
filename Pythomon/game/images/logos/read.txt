@@ -1,0 +1,1 @@
+print("P.S.all logo sprites for description factor.")
