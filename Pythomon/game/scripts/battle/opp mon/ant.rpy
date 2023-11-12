@@ -16,10 +16,10 @@ label ant:
     elif skill_di_opp == "Pheromone":
         play audio "Heal2.ogg"
         show oppythomon at farleft with pixellate
-        if mon_hp >= 888:
-            $ mon_hp == 888
+        $ mon_hp += 100
+        if mon_hp >= 555:
+            $ mon_hp == 555
             "[oppmonster1] HP is already full."
         else:
-            $ mon_hp += 100
             "[oppmonster1] Restores 100 HP!"
 return

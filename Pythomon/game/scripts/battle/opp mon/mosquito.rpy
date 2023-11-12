@@ -30,10 +30,10 @@ label mosquito:
         $ your_hp -= dmg_opp
         "[oppmonster1] Damage! and Restores 200 HP!"
         play audio "Heal2.ogg"
+        $ mon_hp += 200
         if mon_hp >= 550:
-            $ mon_hp == 550
+            $ mon_hp = 550
             "[oppmonster1] HP is already full."
         else:
-            $ mon_hp += 200
             "[oppmonster1] Restores 200 HP!"
 return

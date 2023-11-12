@@ -25,10 +25,10 @@ label queenbee:
     elif skill_di_opp == "Queen's Larvae":
         play audio "Heal2.ogg"
         show oppythomon at farleft with pixellate
-        if mon_hp >= 1000:
-            $ mon_hp == 1000
+        $ mon_hp += 250
+        if mon_hp >= 1200:
+            $ mon_hp = 1200
             "[oppmonster1] HP is already full."
         else:
-            $ mon_hp += 250
             "[oppmonster1] Restores 250 HP!"
 return

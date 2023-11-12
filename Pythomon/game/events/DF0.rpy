@@ -33,11 +33,13 @@ label df0:
     py "Before we get out of this cottage, let's go over that tutorial program you were talking about."
     show pychan at right with move
     #Pictures of the RPS cards here
+    show rule at truecenter
     py "It won't take much of your time, it's just rock paper scissors after all."
     py "The pythomon that won will be the only one who get to act."
     py "In the case that it was a draw, both pythomons will get to act."
     py nice "But I'll make sure yours will always go first, I hope that doesn't go against your moral codes!"
     py nervous "Just remember that luck isn't something I can help you with."
+    hide rule with dissolve
     show pychan
     mc closeeye "Well, this seems easier than expected."
     mc normal "Wait, I haven't even introduced myself yet. I'm [povname], nice to meet you."
@@ -74,10 +76,11 @@ label df0:
     lemon look "I can guess. Heard she's the current boss of the Hivemind group. The last one just up and died so she took over."
     lemon "Hivemind actually go way back in the real world, now that it's in the simulated universe it's still rejected."
     lemon "Not just because of their old deeds but they also took the True String from the DORM."
-    hide yuukii 
-    show bluepy 
-    show pychan at right with dissolve
+    call hide_all
+    show lemon
+    show bluepy
     show yuukii at left
+    show pychan at right with dissolve
     py "That True Sting she's talking about is the apex of the insect faction, by the way."
     mc "I know, heard it from Hiyajou."
     hide bluepy 
@@ -94,7 +97,15 @@ label df0:
     call df0_fight
 
 label df0_fight:
+    scene forest background
+    show lemon
+    show yuukii at left
     lemon "Ready when you are!"
+    call hide_all
+    show lemon
+    show bluepy
+    show yuukii at left
+    show pychan at right with dissolve
     py "Just remember what I told you!"
 #############################################
     $ df0 = True
@@ -114,32 +125,39 @@ label df0_fight:
     play music "audio/bgm/forest theme.mp3" loop
     scene forest background with dissolve
     show lemon with dissolve
-    show yuukii at left with dissolve
-    lemon "You're pretty good for a good timer!"
-    hide yuukii 
-    show bluepy 
-    show pychan at right with dissolve
     show yuukii at left
-    py "You're pretty good for a good timer!"
-    mc "She already said that just keep quiet!"
+    lemon normal "You're pretty good for a good timer!"
+    call hide_all
+    show lemon
+    show bluepy
+    show yuukii at left
+    show pychan at right with dissolve
+    py happy "You're pretty good for a good timer!"
+    show pychan at right
+    mc angry "She already said that just keep quiet!"
     hide bluepy 
     hide pychan 
-    lemon "What did you just say?"
-    mc "Oh, nothing. I have a habit of talking to my imaginary friend."
-    lemon "Huh. Well, I won't judge. That battle was pretty fun!"
+    lemon what "What did you just say?"
+    show lemon
+    mc nervous "Oh, nothing. I have a habit of talking to my imaginary friend."
+    lemon normal "Huh. Well, I won't judge. That battle was pretty fun!"
     lemon "The Hive is just ahead that way... At least that's what I'm told, I haven't actually been there yet."
-    mc "Wait, then can I even believe you?"
+    show lemon
+    mc lookatme "Wait, then can I even believe you?"
     lemon "Time's out! Next time we meet I hope you will use your real name!"
-    "Lemon makes haste and went off in her own way."
-    mc "Next time?"
+    show lemon
     hide lemon with dissolve
+    nara "Lemon makes haste and went off in her own way."
+    mc "Next time?"
     hide yuukii
-    show bluepy 
-    show pychan with dissolve
+    show bluepy
     show yuukii at left
+    show pychan at right with dissolve
     py "Do you know her?"
+    show pychan at right
     mc "Not even familiar."
     py "Putting that aside. Let's see if Lemon gave us the right direction."
+    show pychan at right
     mc "Right."
     hide bluepy 
     hide pychan

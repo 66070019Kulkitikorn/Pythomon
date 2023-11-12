@@ -25,6 +25,7 @@ define df4 = False
 define df5 = False
 define bdf_2 = False
 define bdf_3 = False
+define bdf_4 = False
 
 define Paper = "Paper"
 define Scissors = "Scissors"
@@ -40,21 +41,33 @@ define opp_turn = False
 define farright = Position(xpos=0.1)
 define farleft = Position(xpos=0.9)
 
-image oppythomon = ConditionSwitch("df0 == True", "pythomon_opp/dodo.png",
+image oppythomon = ConditionSwitch(
+"df0 == True", "pythomon_opp/dodo.png",
 "df1 == True", "pythomon_opp/ant.png",
-"df2 == True", "pythomon_opp/dragonfly.png")
+"df2 == True", "pythomon_opp/dragonfly.png",
+"df3_1 == True", "pythomon_opp/stickbug.png",
+"df3_2 == True", "pythomon_opp/bee.png",
+"df4 == True", "pythomon_opp/bossduag.png",
+"df5 == True", "pythomon_opp/finalboss.png",
+"bdf_2 == True", "pythomon_opp/mosquito.png",
+"bdf_3 == True", "pythomon_opp/scorpion.png",
+"bdf_4 == True", "pythomon_opp/truestring.png",)
 
 define con = ""
 
 label win_cont:
     if mon_hp <= 0:
         hide oppythomon with dissolve
+        play audio "win.mp3"
         "You Win!"
         hide screen hp_bars_1v1
+        stop music
         call battle_loop
     elif your_hp <= 0:
         hide pythomon1 with dissolve
+        play audio "lose.mp3"
         "You Lose :("
         hide screen hp_bars_1v1
+        stop music
         call gameover 
     return

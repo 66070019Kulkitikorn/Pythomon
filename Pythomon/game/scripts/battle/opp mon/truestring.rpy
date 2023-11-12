@@ -25,10 +25,10 @@ label truestring:
     elif skill_di_opp == "Propagation":
         play audio "Heal2.ogg"
         show oppythomon at farleft with pixellate
+        $ mon_hp += 200
         if mon_hp >= 1500:
-            $ mon_hp == 1500
+            $ mon_hp = 1500
             "[oppmonster1] HP is already full."
         else:
-            $ mon_hp += 200
             "[oppmonster1] Restores 200 HP!"
 return

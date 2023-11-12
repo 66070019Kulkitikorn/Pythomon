@@ -84,7 +84,7 @@ label prologuee:
             $ Dophin = True
         "Mantis":
             $ yourmonster = "Mantis"
-            $ your_max_full = 180
+            $ your_max_full = 500
             $ skill_position1 = ["Sickles", "Grip", "Guillotine"]
             $ skill_dmg_position1 = [500, 555, 999]
             $ Mantis = True

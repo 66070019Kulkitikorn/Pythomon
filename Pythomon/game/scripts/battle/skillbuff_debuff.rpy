@@ -135,7 +135,7 @@ label your_skill:
 return
 
 label opp_skill:
-    if con == "lose" or con == "draws":
+    if (con == "lose" or con == "draws") and dmg_opp > 0:
         $ dive = False
     if oppmonster1 == "Dodo":
         call dodo
@@ -143,6 +143,20 @@ label opp_skill:
         call ant
     elif oppmonster1 == "Dragonfly":
         call dragonfly
+    elif oppmonster1 == "Hercules Beetle":
+        call herculesbeetle
+    elif oppmonster1 == "Mosquito":
+        call mosquito
+    elif oppmonster1 == "Queen Bee":
+        call queenbee
+    elif oppmonster1 == "Scorpion":
+        call scorpion
+    elif oppmonster1 == "Stick Bug":
+        call stickbug
+    elif oppmonster1 == "Bee":
+        call bee
+    elif oppmonster1 == "True Sting":
+        call truestring
 return
 
 #"Sting", "Bite", "Pheromone"
