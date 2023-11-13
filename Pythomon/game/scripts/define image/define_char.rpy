@@ -71,5 +71,7 @@ define pl2 = Character("{size=+20}Prologue Punk 2{/size}" , style="stroke_kiki",
 define maid = Character("{size=+20}[yuriname]{/size}" , style="stroke_yuri", image="yuri", callback=name_callback, cb_name="i_yuri")
 define reine = Character("{size=+20}Reine Des Abeilles{/size}" , style="stroke_reine", image="reine", callback=name_callback, cb_name="i_reine")
 
+# image goodend = Movie(play="videos/goodend.avi")
+
 
 

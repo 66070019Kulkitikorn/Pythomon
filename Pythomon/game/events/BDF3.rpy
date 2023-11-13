@@ -36,6 +36,7 @@ label bdf_3:
     $ bdf_3 = False
 #############################################
     scene dark forest background with dissolve
+    play music "audio/bgm/black forest theme.mp3" loop
     show bluepy 
     show pychan at right with dissolve
     show yuukii at left

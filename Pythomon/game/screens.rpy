@@ -295,22 +295,22 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.5#0.5
 
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            textbutton _("Start") action Start()
+        
+            textbutton _("Start")  action Start() 
 
         else:
 
             textbutton _("History") action ShowMenu("history")
-
+        
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
-
+       
         textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
@@ -321,7 +321,7 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 

@@ -18,7 +18,7 @@ label ant:
         show oppythomon at farleft with pixellate
         $ mon_hp += 100
         if mon_hp >= 555:
-            $ mon_hp == 555
+            $ mon_hp = 555
             "[oppmonster1] HP is already full."
         else:
             "[oppmonster1] Restores 100 HP!"

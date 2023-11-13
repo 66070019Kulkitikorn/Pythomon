@@ -103,6 +103,7 @@ label bdf_4:
     "Except for Pychan."
     "This mission... is a failure."
     "Chapter 1: Ending 2"
+    $ renpy.movie_cutscene("videos/bad.mp4", loops=0, stop_music=True)
     $ renpy.quit()
 
     

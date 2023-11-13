@@ -250,6 +250,7 @@ label df5_fight:
     "My mind is in a tempest but I cannot stop here."
     "Just wait for me, I'll save you, Reine. ...But for now, I'll have to 'save' the game first, please excuse me."
     "Chapter 1: Ending 1"
+    $ renpy.movie_cutscene("videos/goodend.webm", loops=0, stop_music=True)
     $ renpy.quit()
 
 
