@@ -34,6 +34,7 @@ image your_pick = ConditionSwitch("yours == Scissors", "card/your_scissor.png", 
 "yours == Paper", "card/your_paper.png")
 image opp_pick = ConditionSwitch("opp == Scissors", "card/opp_scissor.png", "opp == Rock", "card/opp_rock.png",
 "opp == Paper", "card/opp_paper.png")
+
 define event_prolog = False
 define your_turn = False
 define opp_turn = False
